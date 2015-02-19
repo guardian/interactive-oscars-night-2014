@@ -4,15 +4,13 @@
 	padding-bottom: 50px;
 	margin-bottom: 50px;
 
+	//web styles
 	h1.content__headline {
 		color: #ffce4b;
 		padding-bottom: 0;
 		margin-bottom: 30px;
 		padding-right: 10px;
-
 	}
-
-
 
 	.guOscarStatue{
 		position: absolute;
@@ -36,10 +34,26 @@
 		color: #efefec;
 		border-bottom: none;
 	}
+
+
+	//app styles
+	.section {
+		color: #dcdcdc;
+	}
+
+	.headline {
+		color: #ffce4b;
+	}
+
+	.standfirst {
+		color: #efefec;
+	}
+
+
 }
 
-.guOscarsContent {
-	background: #f9f8f7;
+.guOscarsContent, .meta {
+	background: #fffcf5;
 }
 
 @media (min-width: 740px){
