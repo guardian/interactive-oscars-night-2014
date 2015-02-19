@@ -1,0 +1,140 @@
+/**
+ * Project: Project name 
+ * File:    Main SCSS
+ */
+
+
+
+@import 'bower_components/sass-mq/_mq';
+@import 'bower_components/pasteup-palette/src/_palette';
+@import 'bower_components/guss-webfonts/src/_webfonts.scss';
+@import 'bower_components/guss-typography/_typography.scss';
+@import 'bower_components/guss-grid-system/_grid-system.scss';
+
+@import 'modules/fonts';
+@import 'modules/sample';
+
+@include guss-typography-defaults;
+
+figure.element-interactive{
+	margin:0
+}
+#article-body.interactivePadding{
+    padding-left:0;
+    padding-right:0;
+}
+
+.interactiveStyling .content__main .content__meta-container.u-cf{
+    display:none
+}
+
+.interactiveStyling .content__main .guInteractive .content__meta-container.u-cf{
+    display:block;
+}
+
+.interactiveStyling header.content__head.u-cf{
+    display:none;
+}
+
+.interactiveStyling .content__main .gs-container{
+    padding:0;
+}
+
+.interactiveStyling .element.element-interactive.interactive{
+    margin-top:0
+}
+
+.interactiveStyling.l-side-margins:before,.interactiveStyling.l-side-margins:after{
+    background-color:#1a1a1a;
+}
+
+.interactiveStyling .content__main.tonal__main.tonal__main--tone-news .gs-container{
+	background-color:#000;
+}
+
+.interactiveStyling .guInteractive .meta__numbers.modern-visible{
+	display:none;
+}
+
+.interactiveStyling .content--interactive .social{
+    padding-bottom:34px;
+}
+
+.interactiveStyling{
+    .meta__social{
+        border-top:none;
+    }
+    @media (min-width: 46.25em){
+        .byline{
+            padding-right:0;
+            width:auto;
+        }
+    }
+    @media (min-width: 61.25em){
+        .content--interactive .content__meta-container .meta__extras{
+            position:relative;
+        }
+
+        .content--interactive .content__meta-container .meta__social, .content--interactive .content__meta-container .meta__numbers{
+            float:none;
+        }
+
+    }
+    @media(min-width:71.25em){
+        .content__meta-container--float{
+            float:none;
+        }
+        .byline{
+            padding-top:0.5em;
+        }
+
+        .social__item{
+            // padding-right:35px;
+        }
+    }
+}
+
+.guInteractive {
+    //background: map-get($pasteup-palette, 'guardian-brand');
+    @include gs-container;
+
+    p {
+    	@include fs-bodyCopy(2);
+    }
+}
+
+.guContent {
+	max-width: 620px;
+	h2 {
+		font-family: $f-serif-headline;
+		font-size: get-font-size(headline, 6);
+		line-height: 1em;
+		margin-bottom: 0;
+		color: map-get($pasteup-palette, 'neutral-1');
+	}
+
+	.guSubHead {
+		@include fs-bodyCopy(3);
+	}
+}
+
+
+
+@media (min-width: 1140px) {
+	.guContent {
+		margin-left: 160px;
+		h2 {
+			font-size: get-font-size(headline, 9);
+		}
+	}
+
+}
+
+@media (min-width: 1300px) {
+	.guContent {
+		margin-left: 240px;
+		h2 {
+			font-size: 60px;
+		}
+	}
+}
